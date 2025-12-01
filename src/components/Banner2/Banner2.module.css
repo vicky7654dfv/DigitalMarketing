@@ -1,0 +1,166 @@
+/* Base Styles */
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: 85vh; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 2px solid #00f3ff; /* Requested border */
+  
+  /* Background Image - Replace URL with your actual image */
+  background-image: url('../../assets/Homepage2/Banner2/img.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* The requested gradient used as an overlay with opacity */
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.9) 0%, rgba(17, 14, 27, 0.85) 100%);
+  z-index: 1;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #00f3ff, #bc13fe, #ff0055);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subText {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  margin-bottom: 40px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Primary Button - Gradient & Glow */
+.btnPrimary {
+  background: linear-gradient(to right, #00f3ff, #bc13fe);
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.25);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0, 243, 255, 0.4);
+  background: linear-gradient(to right, #bc13fe, #00f3ff); /* Reverse gradient on hover */
+}
+
+/* Secondary Button - Outline */
+.btnSecondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #00f3ff;
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.1);
+}
+
+.btnSecondary:hover {
+  background: rgba(0, 243, 255, 0.1);
+  border-color: #ff0055;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* --- Media Queries --- */
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 3.2rem;
+  }
+  .bannerContainer {
+    height: 70vh;
+  }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .subText {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .bannerContainer {
+    height: 60vh;
+  }
+}
+
+/* 425.6px */
+@media screen and (max-width: 425.6px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 375.2px */
+@media screen and (max-width: 375.2px) {
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  .subText {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

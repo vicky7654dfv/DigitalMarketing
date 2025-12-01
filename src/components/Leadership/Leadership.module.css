@@ -1,0 +1,368 @@
+/* Leadership.module.css */
+
+.section {
+  padding: 30px 20px;
+  background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #bc13fe, transparent);
+}
+
+.heading {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+}
+
+.subtitle {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 70px;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 380px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  cursor: pointer;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(188, 19, 254, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Fix: Anchors image to top center to prevent cutting heads */
+  object-position: top center; 
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(80%) contrast(1.1);
+}
+
+.card:hover .img {
+  transform: scale(1.08);
+  filter: grayscale(0%) contrast(1.2);
+}
+
+.glowEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 30%, rgba(188, 19, 254, 0.1) 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .glowEffect {
+  opacity: 1;
+}
+
+.socialOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.9) 80%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding-bottom: 30px;
+}
+
+.card:hover .socialOverlay {
+  opacity: 1;
+}
+
+.connectButton {
+  background: linear-gradient(135deg, #00f3ff, #bc13fe);
+  border: none;
+  padding: 12px 25px;
+  color: #000;
+  font-weight: 700;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.connectButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(188, 19, 254, 0.4);
+  background: linear-gradient(135deg, #bc13fe, #00f3ff);
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+.info {
+  padding: 0 25px 25px;
+}
+
+.name {
+  color: #fff;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.role {
+  color: #bc13fe;
+  font-family: monospace;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bio {
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.detailsButton {
+  background: transparent;
+  border: 1px solid #333;
+  color: #00f3ff;
+  padding: 10px 20px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.detailsButton:hover {
+  border-color: #00f3ff;
+  background: rgba(0, 243, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   1024px Media Query
+   ========================================= */
+@media (max-width: 1024px) {
+  .section {
+    padding: 30px 20px;
+  }
+  
+  .grid {
+    gap: 30px;
+  }
+  
+  .card {
+    width: 320px;
+  }
+  
+  .imageWrapper {
+    height: 380px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* =========================================
+   768px Media Query
+   ========================================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+  
+  .grid {
+    gap: 40px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .imageWrapper {
+    height: 400px;
+  }
+  
+  .name {
+    font-size: 1.7rem;
+  }
+}
+
+/* =========================================
+   425.6px Media Query
+   ========================================= */
+@media (max-width: 425.6px) {
+  .section {
+    padding: 20px 15px;
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  
+  .imageWrapper {
+    height: 320px;
+  }
+  
+  .info {
+    padding: 0 20px 20px;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
+  .bio {
+    font-size: 0.9rem;
+  }
+  
+  .connectButton {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .detailsButton {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   375.2px Media Query
+   ========================================= */
+@media (max-width: 375.2px) {
+  .section {
+    padding: 20px 10px;
+  }
+  
+  .heading {
+    font-size: 1.6rem;
+  }
+  
+  .imageWrapper {
+    height: 280px;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  .name {
+    font-size: 1.4rem;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+  }
+  
+  .connectButton {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

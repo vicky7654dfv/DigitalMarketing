@@ -1,0 +1,291 @@
+/* =========================================
+   1. BASE STYLES (Desktop / Default)
+   ========================================= */
+
+.section {
+  background: #030303;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hex Grid Background Pattern */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(#1a1a1a 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 800;
+}
+
+.separator {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  margin: 0 auto 20px;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.subtitle {
+  color: #888;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+/* Features Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* Card Styling */
+.card {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  height: 300px;
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.cardInner {
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  transition: all 0.4s ease;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardDesc {
+  color: #777;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Tech Decorative Lines */
+.techLineTop,
+.techLineBottom {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.techLineTop {
+  top: 0;
+  left: 0;
+}
+
+.techLineBottom {
+  bottom: 0;
+  right: 0;
+}
+
+/* --- HOVER EFFECTS --- */
+.card:hover {
+  transform: translateY(-10px);
+  background: #0f0f0f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: #333;
+}
+
+.card:hover .techLineTop,
+.card:hover .techLineBottom {
+  width: 100%;
+}
+
+.card:hover .iconWrapper {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.card:hover .icon {
+  filter: grayscale(100%) brightness(0); /* Turns icon black for contrast */
+}
+
+.card:hover .cardTitle {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* Stats Strip */
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #222;
+  padding: 40px;
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.statLabel {
+  color: #fff;
+  font-family: monospace;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* =========================================
+   2. 1024px Media Query
+   ========================================= */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .statValue {
+    font-size: 3rem;
+  }
+}
+
+/* =========================================
+   3. 768px Media Query
+   ========================================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card {
+    height: 280px;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+  }
+}
+
+/* =========================================
+   4. 425.6px Media Query
+   ========================================= */
+@media (max-width: 425.6px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stacked */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    height: auto;
+    min-height: 250px;
+  }
+
+  .statValue {
+    font-size: 2.5rem;
+  }
+}
+
+/* =========================================
+   5. 375.2px Media Query
+   ========================================= */
+@media (max-width: 375.2px) {
+  .section {
+    padding: 10px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .statValue {
+    font-size: 2.2rem;
+  }
+}

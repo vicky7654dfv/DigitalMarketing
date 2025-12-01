@@ -1,0 +1,196 @@
+/* Base Styles */
+.introContainer {
+  background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
+  padding: 40px 10%; /* Increased base padding */
+  border-bottom: 2px solid #00f3ff; /* Requested border */
+}
+
+.introContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(to right, #00f3ff, #bc13fe, #ff0055);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #00f3ff, #bc13fe);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.text {
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.glowBox {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.03); /* Light shade of bg */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.15); /* Requested glow */
+}
+
+.glowBox h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+  .introContainer {
+    padding: 10px 5%; /* Reduced padding for tablet */
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+  }
+  
+  .text {
+    font-size: 1rem;
+  }
+  
+  .glowBox {
+    max-width: 350px;
+    height: 280px;
+  }
+  
+  .glowBox h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .introContainer {
+    padding: 10px 5%; /* Adjusted padding for mobile landscape */
+  }
+  
+  .introContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px; /* Reduced gap for mobile */
+  }
+  
+  .divider {
+    margin: 0 auto 20px auto;
+  }
+  
+  .glowBox {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+  }
+  
+  .glowBox h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 425.6px */
+@media screen and (max-width: 425.6px) {
+  .introContainer {
+    padding: 10px 20px; /* Fixed: Changed from percentage to fixed padding */
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .divider {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 5px; /* Added small side padding */
+  }
+  
+  .glowBox {
+    height: 220px;
+    padding: 20px; /* Added padding inside glow box */
+  }
+  
+  .glowBox h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* 375.2px */
+@media screen and (max-width: 375.2px) {
+  .introContainer {
+    padding: 10px 15px; /* Fixed: Even tighter padding for small phones */
+  }
+  
+  .heading {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0; /* Removed side padding for smallest screens */
+  }
+  
+  .divider {
+    width: 50px;
+    height: 3px;
+    margin-bottom: 12px;
+  }
+  
+  .glowBox {
+    height: 200px;
+    padding: 15px;
+  }
+  
+  .glowBox h3 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
+  
+  .introContent {
+    gap: 30px; /* Reduced gap further */
+  }
+}

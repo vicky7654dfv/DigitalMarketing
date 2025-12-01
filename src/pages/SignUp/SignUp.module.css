@@ -1,0 +1,562 @@
+/* Base Styles */
+.mainWrapper {
+  /* Requested Dark Gradient Background */
+  background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
+  min-height: 100vh;
+}
+
+.signUpWrap {
+  padding: 40px 20px;
+  animation: fadeIn 0.8s ease-in;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background accent glow - Adjusted to Purple/Cyan */
+.signUpWrap::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 50%;
+  height: 500px;
+  background: radial-gradient(circle at 50% 50%, rgba(188, 19, 254, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.signUpWrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 500px;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 243, 255, 0.1) 0%, rgba(5, 5, 5, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pageHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pageHeading h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  /* Tri-color gradient text */
+  background: linear-gradient(to right, #00f3ff, #bc13fe, #ff0055);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pageHeading p {
+  font-size: 1.1rem;
+  color: #a7b3c2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.signUpContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(20, 20, 25, 0.6); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 20px;
+  /* Requested Cyan glow shadow */
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.15);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 650px;
+}
+
+/* Image Section */
+.imageSection {
+  position: relative;
+  background: #08080a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-right: 1px solid rgba(188, 19, 254, 0.2);
+  /* Subtle pattern overlay */
+  background-image: radial-gradient(#1e1e24 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.imageContent {
+  text-align: center;
+  z-index: 2;
+}
+
+.logoWrapper {
+  margin-bottom: 40px;
+}
+
+.logoImage {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  /* Neon Pink Glow on logo */
+  filter: drop-shadow(0 0 10px rgba(255, 0, 85, 0.4));
+}
+
+.imageOverlay h3 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.imageOverlay p {
+  color: #c0c0c0;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto 30px;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.featureList span {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.featureList span:hover {
+  background: rgba(0, 243, 255, 0.1);
+  transform: translateX(5px);
+  border-color: #00f3ff;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.featureList span i {
+  /* Gradient Icon */
+  background: linear-gradient(to bottom, #00f3ff, #bc13fe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form Section */
+.formSection {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+
+.signUpForm {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.signUpForm h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  /* Neon cyan border bottom as requested style */
+  border-bottom: 2px solid #00f3ff;
+  width: fit-content;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  color: #a7b3c2;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.required {
+  color: #ff0055; /* Neon Pink */
+}
+
+.inputField {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.inputField::placeholder {
+  color: #525252;
+}
+
+.inputField:focus {
+  outline: none;
+  /* Neon Cyan Border */
+  border-color: #00f3ff; 
+  background: rgba(0, 243, 255, 0.02);
+  /* Cyan Shadow */
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.inputField:hover {
+  border-color: #bc13fe; /* Purple on hover */
+}
+
+.passwordRequirements {
+  background: rgba(188, 19, 254, 0.05); /* Very subtle purple bg */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(188, 19, 254, 0.2);
+}
+
+.reqTitle {
+  color: #bc13fe;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.reqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.reqGrid span {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.valid {
+  color: #00f3ff; /* Cyan */
+  text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+}
+
+.invalid {
+  color: #6b7280; /* Gray */
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  /* Gradient Button */
+  background: linear-gradient(90deg, #bc13fe 0%, #ff0055 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+  filter: brightness(1.1);
+}
+
+.socialLogin {
+  margin: 30px 0;
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.divider span {
+  background: #0d0d12; /* Match container generally */
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #00f3ff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.15);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.loginLinkWrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.loginLinkWrapper p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.loginBtn {
+  background: transparent;
+  color: #00f3ff;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.loginBtn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #00f3ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.loginBtn:hover::after {
+  transform: scaleX(1);
+}
+
+.loginBtn:hover {
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+}
+
+
+/* =========================================
+   MEDIA QUERIES (STRICT ORDER)
+   ========================================= */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .signUpContainer {
+    max-width: 900px;
+    grid-template-columns: 45% 55%;
+  }
+  
+  .formSection {
+    padding: 30px;
+  }
+  
+  .imageSection {
+    padding: 30px;
+  }
+  
+  .pageHeading h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .signUpWrap {
+    padding: 20px 15px;
+  }
+  
+  .signUpContainer {
+    grid-template-columns: 1fr; /* Stack Vertically */
+    max-width: 550px;
+  }
+  
+  /* Hide image section or make it smaller header */
+  .imageSection {
+    padding: 30px 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(188, 19, 254, 0.2);
+    min-height: auto;
+  }
+  
+  .formSection {
+    padding: 30px 20px;
+  }
+  
+  .pageHeading {
+    margin-bottom: 30px;
+  }
+  
+  .pageHeading h1 {
+    font-size: 2.2rem;
+  }
+  
+  .logoImage {
+    width: 140px;
+    margin-bottom: 10px;
+  }
+  
+  .logoWrapper {
+    margin-bottom: 10px;
+  }
+  
+  .imageOverlay h3 {
+    font-size: 1.8rem;
+  }
+  
+  .featureList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* 425.6px */
+@media (max-width: 425.6px) {
+  .signUpWrap {
+    padding: 10px 5px;
+  }
+  
+  .signUpContainer {
+    border-radius: 12px;
+  }
+  
+  .formSection {
+    padding: 25px 15px;
+  }
+  
+  .pageHeading h1 {
+    font-size: 2rem;
+  }
+  
+  .pageHeading p {
+    font-size: 0.9rem;
+  }
+  
+  .signUpForm h2 {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+  }
+  
+  .socialButtons {
+    grid-template-columns: 1fr; /* Stack social buttons */
+  }
+  
+  .inputField {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 375.2px */
+@media (max-width: 375.2px) {
+  .pageHeading h1 {
+    font-size: 1.8rem;
+  }
+  
+  .imageOverlay h3 {
+    font-size: 1.4rem;
+  }
+  
+  .imageOverlay p {
+    font-size: 0.85rem;
+    display: none; /* Hide description on very small screens to save space */
+  }
+  
+  .featureList span {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .reqGrid {
+    grid-template-columns: 1fr; /* Stack password rules */
+  }
+  
+  .submitBtn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

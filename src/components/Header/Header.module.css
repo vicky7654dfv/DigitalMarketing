@@ -1,0 +1,551 @@
+/* Base Styles */
+.header {
+  /* Changed to deep void black/purple gradient */
+  background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
+  /* Cyan glow shadow */
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Neon cyan border bottom */
+  border-bottom: 2px solid #00f3ff;
+  animation: fadeIn 0.8s ease-in-out;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  position: relative;
+}
+
+/* Logo Styles */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoContainer:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6));
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 800; /* Slightly reduced weight for cleaner digital look */
+  font-family: "Inter", "Arial", sans-serif; /* Suggesting a cleaner font */
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  /* Digital Gradient: Cyan to Purple to Pink */
+  background: linear-gradient(to right, #00f3ff, #bc13fe, #ff0055);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Neon Glow Text Shadow */
+  filter: drop-shadow(0 0 2px rgba(0, 243, 255, 0.3));
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+/* Home Dropdown */
+.homeDropdown {
+  position: relative;
+}
+
+.homeButton {
+  background: none;
+  border: 1px solid transparent;
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px; /* Pill shape for digital feel */
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.homeButton:hover,
+.homeDropdown:focus-within .homeButton {
+  background: rgba(0, 243, 255, 0.1);
+  color: #00f3ff;
+  border-color: rgba(0, 243, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%; /* Slight gap */
+  left: 0;
+  /* Deep dark background */
+  background: #0a0a0a;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  min-width: 200px;
+  z-index: 1001;
+  /* Thin gradient border */
+  border: 1px solid #333;
+  border-top: 3px solid #bc13fe; /* Purple top accent */
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  border-radius: 6px;
+}
+
+.dropdownItem:hover {
+  background: linear-gradient(90deg, rgba(188, 19, 254, 0.5) 0%, transparent 100%);
+  color: #00f3ff; /* Neon Purple */
+  padding-left: 2rem;
+}
+
+/* Navigation Links */
+.navLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Updated Hover FX: Glow instead of standard block hover */
+.navLink:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Updated Underline FX */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  /* Gradient underline */
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  padding: 0.6rem;
+  gap: 5px;
+  position: relative;
+  z-index: 1002;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.mobileMenuButton:hover {
+  background: rgba(188, 19, 254, 0.2);
+  border-color: #bc13fe;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* X Close Button Styles */
+.mobileMenuButton.close .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: #00f3ff; /* Cyan when open */
+}
+
+.mobileMenuButton.close .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.mobileMenuButton.close .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: #bc13fe; /* Purple when open */
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #050505; /* Dark background */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  z-index: 999;
+  border-top: 1px solid #333;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobileNav.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Darker overlay */
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobileOverlay.open {
+  display: block;
+}
+
+.mobileHomeSection {
+  border-bottom: 1px solid #1f2937;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border-radius: 8px;
+  background: #0f111a;
+  overflow: hidden;
+}
+
+.mobileHomeButton {
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.mobileHomeButton:hover {
+  background: #1a1d2d;
+  color: #00f3ff;
+}
+
+.mobileDropdownMenu {
+  padding-left: 0;
+  margin-bottom: 0;
+  background: #0a0a0a;
+  animation: slideDownMobile 0.3s ease;
+}
+
+@keyframes slideDownMobile {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 300px;
+  }
+}
+
+.mobileDropdownItem {
+  display: block;
+  padding: 1rem 0;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid #1f2937;
+}
+
+.mobileDropdownItem:hover {
+  color: #bc13fe;
+  background: rgba(188, 19, 254, 0.05);
+  border-left-color: #bc13fe;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 1rem 0;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #1f2937;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  background: #0f111a;
+  margin-bottom: 0.5rem;
+}
+
+.mobileNavLink:hover {
+  /* Gradient background for mobile buttons */
+  background: linear-gradient(135deg, #00f3ff 0%, #bc13fe 100%);
+  color: #000; /* Black text on bright gradient */
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(188, 19, 254, 0.4);
+  border-bottom: none;
+}
+
+/* 1024px Media Query */
+@media (max-width: 1024px) {
+  .headerContainer {
+    padding: 0 1.5rem;
+    justify-content: space-between;
+  }
+
+  .desktopNav {
+    gap: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .navLink {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+  .logoWrapper {
+    gap: 30px;
+  }
+}
+
+/* 768px Media Query */
+@media (max-width: 768px) {
+  .headerContainer {
+    height: 75px;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .mobileNav.open {
+    display: flex;
+  }
+
+  .mobileHomeSection {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .mobileHomeButton {
+    border-bottom: 1px solid #1f2937 !important;
+    margin: 0;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .logoWrapper {
+    gap: 25px;
+  }
+}
+
+/* 425.6px Media Query */
+@media (max-width: 425.6px) {
+  .headerContainer {
+    padding: 0 0.75rem;
+    height: 75px;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .mobileNav {
+    padding: 0.75rem;
+  }
+
+  .mobileNavLink {
+    font-size: 0.95rem;
+    padding: 0.65rem 0;
+  }
+  .logoWrapper {
+    gap: 20px;
+  }
+}
+
+/* 375.2px Media Query */
+@media (max-width: 375.2px) {
+  .headerContainer {
+    padding: 0 0.5rem;
+    justify-content: space-between;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .logoContainer {
+    gap: 8px;
+  }
+  .logoWrapper {
+    gap: 15px;
+  }
+  .mobileNav {
+    padding: 0.5rem;
+  }
+
+  .mobileNavLink {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+  }
+
+  .mobileHomeButton {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+  }
+
+  .mobileDropdownItem {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+}
+
+/* Ensure dropdown closes when clicking outside */
+.homeDropdown:focus-within .dropdownMenu {
+  display: block;
+}
+
+/* Hide dropdown when not focused */
+.homeDropdown:not(:focus-within) .dropdownMenu {
+  display: none;
+}
+
+/* Show dropdown when home button is hovered (desktop only) */
+@media (min-width: 769px) {
+  .homeDropdown:hover .dropdownMenu {
+    display: block;
+  }
+}

@@ -1,0 +1,120 @@
+/* Base Styles */
+.serviceSection {
+  background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
+  padding: 40px 10%;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.gradientSpan {
+  background: linear-gradient(to right, #00f3ff, #bc13fe, #ff0055);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subTitle {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  /* Light shade of the background color */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px 25px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* Required Shadow & Border */
+  box-shadow: 0 4px 30px rgba(0, 243, 255, 0.15);
+  border-bottom: 2px solid #00f3ff;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  /* Intense Glow on Hover */
+  box-shadow: 0 10px 40px rgba(0, 243, 255, 0.25);
+  border-bottom: 2px solid #ff0055; /* Switch color on hover */
+}
+
+.iconBox {
+  font-size: 2.5rem;
+  color: #00f3ff;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.serviceCard:hover .iconBox {
+  color: #bc13fe;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.cardDesc {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .serviceSection {
+    padding: 40px 5%;
+  }
+}
+
+/* 425.6px */
+@media screen and (max-width: 425.6px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .serviceCard {
+    padding: 30px 20px;
+  }
+}
+
+/* 375.2px */
+@media screen and (max-width: 375.2px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .subTitle {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,267 @@
+/* =========================================
+   1. BASE STYLES (Desktop)
+   ========================================= */
+.section {
+  padding: 10px 20px;
+  background: #080808;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Grid Pattern */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  margin-bottom: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.subHeading {
+  color: #888;
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card Item Styling */
+.item {
+  position: relative;
+  padding: 50px 30px;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  text-align: center;  /* Centers text */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  border-color: rgba(188, 19, 254, 0.3);
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Number Circle */
+.numberWrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  background: #000;
+  position: relative;
+  z-index: 2;
+}
+
+.number {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: monospace;
+  transition: color 0.3s;
+}
+
+.item:hover .numberWrapper {
+  border-color: #00f3ff;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.item:hover .number {
+  color: #00f3ff;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.item:hover .title {
+  color: #bc13fe;
+}
+
+.desc {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Bottom Highlight Line Animation */
+.bottomHighlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.item:hover .bottomHighlight {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   2. 1024px Media Query
+   ========================================= */
+@media (max-width: 1024px) {
+  .section {
+    padding: 10px 20px;
+  }
+
+  .grid {
+    gap: 30px;
+  }
+  
+  .item {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+}
+
+/* =========================================
+   3. 768px Media Query
+   ========================================= */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack vertically */
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+  
+  .item {
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================
+   4. 425.6px Media Query
+   ========================================= */
+@media (max-width: 425.6px) {
+  .section {
+    padding: 10px 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .subHeading {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .numberWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .number {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   5. 375.2px Media Query
+   ========================================= */
+@media (max-width: 375.2px) {
+  .section {
+    padding: 10px 10px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .item {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
