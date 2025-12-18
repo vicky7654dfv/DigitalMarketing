@@ -1,7 +1,7 @@
 /* Base Styles */
 .serviceSection {
   background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
-  padding: 40px 10%;
+  padding: 80px 10%;
   min-height: 100vh;
 }
 
@@ -92,7 +92,7 @@
 /* 768px */
 @media screen and (max-width: 768px) {
   .serviceSection {
-    padding: 40px 5%;
+    padding: 60px 5%;
   }
 }
 

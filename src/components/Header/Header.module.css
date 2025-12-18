@@ -469,6 +469,8 @@
   .headerContainer {
     padding: 0 0.75rem;
     height: 75px;
+    justify-content: center;
+    gap: 15rem;
   }
 
   .logoText {
@@ -496,7 +498,8 @@
 @media (max-width: 375.2px) {
   .headerContainer {
     padding: 0 0.5rem;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 12rem;
   }
 
   .logoText {

@@ -1,7 +1,7 @@
 /* Base Styles */
 .statsContainer {
   background: #08080c; /* Light shade of the main dark bg */
-  padding: 10px 10%;
+  padding: 70px 10%;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -57,7 +57,7 @@
 
 /* 425.6px */
 @media screen and (max-width: 425.6px) {
-  .statsContainer { padding: 40px 5%; }
+  .statsContainer { padding: 50px 5%; }
   .number { font-size: 2rem; }
 }
 

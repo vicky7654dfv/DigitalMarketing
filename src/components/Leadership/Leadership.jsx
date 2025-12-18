@@ -29,7 +29,7 @@ const Leadership = () => {
   const handleConnect = (e, name) => {
     e.preventDefault();
     e.stopPropagation();
-    window.location.href = "/Error";
+    window.location.href = "#/Error";
   };
 
   return (
@@ -42,7 +42,7 @@ const Leadership = () => {
           <div 
             key={index} 
             className={styles.card}
-            onClick={() => window.location.href = "/Error"}
+            onClick={() => window.location.href = "#/Error"}
           >
             <div className={styles.imageWrapper}>
               <img src={leader.img} alt={leader.name} className={styles.img} />

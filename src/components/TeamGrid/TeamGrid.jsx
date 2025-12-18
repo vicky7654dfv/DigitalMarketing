@@ -18,7 +18,7 @@ const TeamGrid = () => {
   ];
 
   const handleMemberClick = (member) => {
-    window.location.href = `/Error`;
+    window.location.href = `#/Error`;
   };
 
   return (
@@ -79,7 +79,7 @@ const TeamGrid = () => {
         <p className={styles.footerText}>Ready to deploy your next campaign?</p>
         <button 
           className={styles.ctaButton}
-          onClick={() => window.location.href = "/Error"}
+          onClick={() => window.location.href = "#/Error"}
         >
           Assemble Your Team →
         </button>

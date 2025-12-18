@@ -25,10 +25,10 @@ const Banner2 = () => {
         </p>
         
         <div className={styles.buttonGroup}>
-          <a href="/Error" className={`${styles.btn} ${styles.btnPrimary}`}>
+          <a href="#/Error" className={`${styles.btn} ${styles.btnPrimary}`}>
             Get Started <i className="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="/Error" className={`${styles.btn} ${styles.btnSecondary}`}>
+          <a href="#/Error" className={`${styles.btn} ${styles.btnSecondary}`}>
             Learn More
           </a>
         </div>

@@ -1,5 +1,5 @@
 .section {
-  padding: 40px 20px;
+  padding: 90px 20px;
   background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
   position: relative;
   overflow: hidden;
@@ -312,7 +312,7 @@
 /* 1024px */
 @media (max-width: 1024px) {
   .section {
-    padding: 40px 20px;
+    padding: 85px 20px;
   }
   
   .grid {
@@ -328,7 +328,7 @@
 /* 768px */
 @media (max-width: 768px) {
   .section {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
   
   .heading {
@@ -361,7 +361,7 @@
 /* 425.6px */
 @media (max-width: 425.6px) {
   .section {
-    padding: 40px 15px;
+    padding: 60px 15px;
   }
   
   .heading {
@@ -410,7 +410,7 @@
 /* 375.2px */
 @media (max-width: 375.2px) {
   .section {
-    padding: 40px 10px;
+    padding: 60px 10px;
   }
   
   .heading {

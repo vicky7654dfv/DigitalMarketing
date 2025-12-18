@@ -2,7 +2,7 @@
    1. BASE STYLES (Desktop)
    ========================================= */
 .section {
-  padding: 10px 20px;
+  padding: 60px 20px 80px 20px;
   background: #080808;
   border-top: 1px solid #1a1a1a;
   border-bottom: 1px solid #1a1a1a;
@@ -170,7 +170,7 @@
    ========================================= */
 @media (max-width: 1024px) {
   .section {
-    padding: 10px 20px;
+  padding: 60px 20px 80px 20px;
   }
 
   .grid {
@@ -209,8 +209,8 @@
    4. 425.6px Media Query
    ========================================= */
 @media (max-width: 425.6px) {
-  .section {
-    padding: 10px 15px;
+  .section { 
+     padding: 60px 20px 70px 20px;
   }
 
   .heading {
@@ -245,7 +245,7 @@
    ========================================= */
 @media (max-width: 375.2px) {
   .section {
-    padding: 10px 10px;
+      padding: 60px 20px 70px 20px;
   }
 
   .heading {

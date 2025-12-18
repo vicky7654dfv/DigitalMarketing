@@ -237,7 +237,7 @@ const FAQPage = () => {
             
             <button 
               className={styles.contactButton}
-              onClick={() => window.location.href = '/Error'}
+              onClick={() => window.location.href = '#/Error'}
             >
               <i className="fa-solid fa-message"></i>
               Ask New Question
@@ -281,7 +281,7 @@ const FAQPage = () => {
                         className={styles.actionButton}
                         onClick={(e) => {
                           e.stopPropagation();
-                          window.location.href = '/Error';
+                          window.location.href = '#/Error';
                         }}
                       >
                         <i className="fa-solid fa-thumbs-up"></i>
@@ -291,7 +291,7 @@ const FAQPage = () => {
                         className={styles.actionButton}
                         onClick={(e) => {
                           e.stopPropagation();
-                          window.location.href = '/Error';
+                          window.location.href = '#/Error';
                         }}
                       >
                         <i className="fa-solid fa-share"></i>
@@ -319,7 +319,7 @@ const FAQPage = () => {
             </div>
             <button 
               className={styles.ctaButton}
-              onClick={() => window.location.href = '/Error'}
+              onClick={() => window.location.href = '#/Error'}
             >
               Schedule Free Consultation
             </button>

@@ -4,7 +4,7 @@
 .dashboardWrapper {
   min-height: calc(100vh - 160px);
   background: #050505;
-  padding: 30px;
+  padding: 50px 30px 80px 30px;
   font-family: 'Inter', sans-serif;
   color: #fff;
 }
@@ -738,7 +738,7 @@
 /* 1024px */
 @media (max-width: 1024px) {
   .dashboardWrapper {
-    padding: 20px;
+      padding: 50px 30px 80px 30px;
   }
   
   .mainGrid {
@@ -793,7 +793,7 @@
 /* 425.6px */
 @media (max-width: 425.6px) {
   .dashboardWrapper {
-    padding: 15px;
+      padding: 50px 15px 80px 15px;
   }
   
   .title {

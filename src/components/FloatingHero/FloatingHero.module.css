@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   min-height: 60vh;
+  height: 600px;
   background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
   overflow: hidden;
   display: flex;
@@ -29,17 +30,50 @@
 }
 
 /* Individual Icon Positions */
-.icon1 { top: 10%; left: 10%; animation-delay: 0s; color: rgba(0, 243, 255, 0.2); }
-.icon2 { top: 20%; right: 15%; animation-delay: 1s; }
-.icon3 { bottom: 15%; left: 20%; animation-delay: 2s; color: rgba(188, 19, 254, 0.2); }
-.icon4 { bottom: 25%; right: 10%; animation-delay: 3s; }
-.icon5 { top: 50%; left: 5%; animation-delay: 1.5s; }
-.icon6 { top: 60%; right: 5%; animation-delay: 2.5s; color: rgba(255, 0, 85, 0.2); }
+.icon1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  color: rgba(0, 243, 255, 0.2);
+}
+.icon2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+.icon3 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 2s;
+  color: rgba(188, 19, 254, 0.2);
+}
+.icon4 {
+  bottom: 25%;
+  right: 10%;
+  animation-delay: 3s;
+}
+.icon5 {
+  top: 50%;
+  left: 5%;
+  animation-delay: 1.5s;
+}
+.icon6 {
+  top: 60%;
+  right: 5%;
+  animation-delay: 2.5s;
+  color: rgba(255, 0, 85, 0.2);
+}
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .contentWrapper {
@@ -91,25 +125,45 @@
 
 /* 1024px */
 @media screen and (max-width: 1024px) {
-  .title { font-size: 3rem; }
-  .floatIcon { font-size: 2.5rem; }
+  .title {
+    font-size: 3rem;
+  }
+  .floatIcon {
+    font-size: 2.5rem;
+  }
 }
 
 /* 768px */
 @media screen and (max-width: 768px) {
-  .heroContainer { min-height: 60vh; }
-  .title { font-size: 2.5rem; }
-  .description { font-size: 1rem; }
+  .heroContainer {
+    min-height: 60vh;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
 }
 
 /* 425.6px */
 @media screen and (max-width: 425.6px) {
-  .title { font-size: 2rem; }
-  .floatIcon { font-size: 2rem; opacity: 0.5; }
+  .title {
+    font-size: 2rem;
+  }
+  .floatIcon {
+    font-size: 2rem;
+    opacity: 0.5;
+  }
 }
 
 /* 375.2px */
 @media screen and (max-width: 375.2px) {
-  .title { font-size: 1.8rem; }
-  .ctaButton { padding: 10px 25px; font-size: 0.9rem; }
+  .title {
+    font-size: 1.8rem;
+  }
+  .ctaButton {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
 }

@@ -7,7 +7,7 @@
 }
 
 .loginWrap {
-  padding: 40px 20px;
+  padding: 80px 20px;
   animation: fadeIn 0.8s ease-in;
   position: relative;
   z-index: 1;
@@ -473,7 +473,7 @@
 /* 768px */
 @media (max-width: 768px) {
   .loginWrap {
-    padding: 30px 15px;
+    padding: 60px 15px;
   }
   
   .loginContainer {
@@ -512,7 +512,7 @@
 /* 425.6px */
 @media (max-width: 425.6px) {
   .loginWrap {
-    padding: 20px 10px;
+    padding: 50px 10px;
   }
   
   .loginContainer {
@@ -576,7 +576,7 @@
 /* 375.2px */
 @media (max-width: 375.2px) {
   .loginWrap {
-    padding: 15px 8px;
+    padding: 50px 8px;
   }
   
   .formSection {

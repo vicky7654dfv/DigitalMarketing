@@ -1,7 +1,7 @@
 /* Leadership.module.css */
 
 .section {
-  padding: 30px 20px;
+  padding: 80px 20px;
   background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
   text-align: center;
   position: relative;
@@ -232,7 +232,7 @@
    ========================================= */
 @media (max-width: 1024px) {
   .section {
-    padding: 30px 20px;
+    padding: 80px 20px;
   }
   
   .grid {
@@ -257,7 +257,7 @@
    ========================================= */
 @media (max-width: 768px) {
   .section {
-    padding: 30px 20px;
+    padding: 60px 20px;
   }
   
   .heading {
@@ -293,7 +293,7 @@
    ========================================= */
 @media (max-width: 425.6px) {
   .section {
-    padding: 20px 15px;
+    padding: 50px 15px;
   }
   
   .heading {
@@ -338,7 +338,7 @@
    ========================================= */
 @media (max-width: 375.2px) {
   .section {
-    padding: 20px 10px;
+    padding: 50px 10px;
   }
   
   .heading {

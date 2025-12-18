@@ -6,7 +6,7 @@
 }
 
 .signUpWrap {
-  padding: 40px 20px;
+  padding: 80px 20px;
   animation: fadeIn 0.8s ease-in;
   position: relative;
   z-index: 1;
@@ -442,7 +442,7 @@
 /* 768px */
 @media (max-width: 768px) {
   .signUpWrap {
-    padding: 20px 15px;
+    padding: 60px 15px;
   }
   
   .signUpContainer {
@@ -493,7 +493,7 @@
 /* 425.6px */
 @media (max-width: 425.6px) {
   .signUpWrap {
-    padding: 10px 5px;
+    padding: 50px 5px;
   }
   
   .signUpContainer {

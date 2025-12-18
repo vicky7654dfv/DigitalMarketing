@@ -16,7 +16,7 @@
 
 .footerWrap {
   /* Dark Cyber Theme: Deep Void Black */
-  background: linear-gradient(135deg, #050505 0%, #0f0b1e 100%);
+  background: linear-gradient(0deg, #050505 0%, #0f0b1e 100%);
   padding: 80px 40px 60px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
@@ -51,7 +51,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #00f3ff, #bc13fe);
+  background: linear-gradient(black);
   box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
   z-index: 10;
 }
