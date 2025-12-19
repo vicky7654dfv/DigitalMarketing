@@ -2,7 +2,7 @@
 .introContainer {
   background: linear-gradient(90deg, #050505 0%, #110e1b 100%);
   padding: 40px 10% 40px 10%; /* Increased base padding */
-  border-bottom: 2px solid #00f3ff; /* Requested border */
+  /* border-bottom removed here */
 }
 
 .introContent {

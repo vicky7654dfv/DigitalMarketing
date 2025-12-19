@@ -37,7 +37,6 @@ const CorePhilosophy = () => {
               </div>
               <h3 className={styles.title}>{val.title}</h3>
               <p className={styles.desc}>{val.desc}</p>
-              <div className={styles.bottomHighlight}></div>
             </div>
           ))}
         </div>
